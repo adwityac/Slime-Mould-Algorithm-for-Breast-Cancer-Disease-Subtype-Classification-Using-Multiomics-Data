@@ -1,0 +1,242 @@
+/* General Styling */
+.detection-page {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #0f0f0f, #ec4899); /* Gradient from style.css */
+    min-height: 100vh; /* Covers full screen height */
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Consistent font */
+}
+
+
+
+/* Form Section */
+.form-section {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.form-section p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
+
+/* Ensure the dropdown options are also readable */
+select option {
+    background-color: white;
+    color: black;
+}
+
+/* Make file input and button bigger */
+input[type="file"], button {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+/* Ensure the button stands out */
+button {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    border: none;
+}
+
+button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Styling for the Results Section */
+.results-section {
+    margin-bottom: 30px; /* Add some space at the bottom */
+}
+
+/* Footer */
+.footer {
+    background-color: #181818;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+
+
+/* Ensure the graphs fit properly */
+.result-charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chart-container {
+    flex: 1 1 calc(50% - 30px);
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.result-graph {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+
+
+
+
+/* Make the form section paragraph and label slightly larger */
+.form-section p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.form-section label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+
+
+.dynamic-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between Model and Feature Selection */
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.model-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.result-summary {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.model-info p,
+.prediction-counts p {
+    margin: 5px 0;
+}
+
+
+.prediction-counts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+
+.comparative-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dropdown-toggle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: #ec4899;
+}
+
+.comparative-image {
+    margin-top: 15px;
+    max-width: 95%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix table styling for prediction metrics */
+#metricsTable {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid var(--primary-color);
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+    background-color: #1e1e1e;
+}
+
+#metricsTable th,
+#metricsTable td {
+    padding: 12px 16px;
+    border: 1px solid var(--primary-color);
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#metricsTable th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#metricsTable td {
+    background-color: #2b2b2b;
+}
+

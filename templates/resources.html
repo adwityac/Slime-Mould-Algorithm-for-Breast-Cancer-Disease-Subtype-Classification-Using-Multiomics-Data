@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - BCD Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav-logo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <span>BCD Care</span>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('detection') }}">Detection</a>
+                <a href="{{ url_for('eda') }}">EDA</a>
+                <a href="{{ url_for('resources') }}" class="active">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="resources">
+        <div class="container">
+            <h1>MultiOmics & Breast Cancer Resources</h1>
+            <p>This project was made to explore multi-omics data and apply advanced machine learning models to improve breast cancer diagnosis and prognosis.</p>
+    
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>MultiOmics Resources</h3>
+                    <p>Learn more about multi-omics data and its applications in medical research.</p>
+                    <a href="https://www.nature.com/articles/s41586-020-2179-8" target="_blank">MultiOmics Research</a>
+                </div>
+    
+                <div class="resource-card">
+                    <h3>Breast Cancer Data</h3>
+                    <p>Explore breast cancer datasets, including gene expression, mutation data, and more.</p>
+                    <a href="https://portal.gdc.cancer.gov/projects/TCGA-BRCA" target="_blank">TCGA Breast Cancer</a>
+                </div>
+    
+                <div class="resource-card">
+                    <h3>Breast Cancer Research</h3>
+                    <p>Discover the latest research in breast cancer and new treatment methods.</p>
+                    <a href="https://www.cancer.gov/about-cancer/types/breast" target="_blank">National Cancer Institute</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BCD Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - BCD Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+</head>
+<body>
+    
+    <!-- Banasthali Vidyapith Logo -->
+    <header class="college-header">
+        <img src="{{ url_for('static', filename='banasthali_logo.png') }}" alt="Banasthali Vidyapith Logo" class="logo">
+        <div class="title-container">
+            <h1 class="college-title">Banasthali Vidyapith</h1>
+            <h1 class="department">Department of Computer Science</h1>
+            <h2 class="project-title">Breast Cancer Disease Subtype Classification using AI/ML</h2>
+        </div>
+        <img src="{{ url_for('static', filename='Hey_Machine_Learning_Logo.png') }}" alt="Hey Machine Learning Logo" class="logo">
+    </header>
+    
+    
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav-logo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <span>BCD Care</span>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}" class="active">Home</a>
+                <a href="{{ url_for('detection') }}">Detection</a>
+                <a href="{{ url_for('eda') }}">EDA</a>
+                <a href="{{ url_for('resources') }}">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="welcome" class="welcome-banner">Welcome!</div>
+
+        <section class="hero">
+            <div class="container hero-wrapper">
+                <!-- Left Image with Animation -->
+                <div class="hero-image-container left">
+                    <img src="{{ url_for('static', filename='1.png') }}" alt="Medical AI Analysis" class="hero-image">
+                </div>
+    
+                <!-- Text Content -->
+                <div class="hero-content">
+                    <h1>Early Detection Saves Lives</h1>
+                    <p>Breast cancer diagnosis has significantly improved with the advent of AI-ML. This platform aims to compare various AI-ML models for breast cancer detection and subtype classification evaluating the effectiveness in terms of accuracy.</p>
+                </div>
+    
+                <!-- Right Image with Animation -->
+                <div class="hero-image-container right">
+                    <img src="{{ url_for('static', filename='2.png') }}" alt="Healthcare AI" class="hero-image">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-content">
+                        <p>Upload your patient data in CSV format and get instant analysis using our state-of-the-art detection algorithms. Our platform aims to help medical professionals make more informed decisions.</p>
+                        <a href="{{ url_for('detection') }}" class="btn btn-primary">
+                            Start Detection
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BCD Care. All rights reserved.</p>
+            <p class="ui-credit">UI designed by Adwitya</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script type="module">
+        const welcomeEl = document.getElementById("welcome");
+welcomeEl.style.animation = "fadeIn 2s ease-in-out forwards"; // Trigger animation manually
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* Root Variables */
+:root {
+    --primary-color: #ec4899;
+    --primary-hover: #be185d;
+    --bg-color: #121212; /* Dark background for consistency */
+    --text-color: #e5e7eb;
+    --text-light: #9ca3af;
+    --white: #ffffff;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1.2rem 0; /* Increase padding for a bigger navbar */
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 2rem; /* Make 'BCD Care' bigger */
+    font-weight: bold;
+    color: var(--white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Increase space between links */
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.8rem; /* Increase font size of the links */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--text-light);
+}
+
+
+
+/* Resources Section */
+.resources {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.resources h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.resources p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+/* Resource Cards */
+.resource-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resource-card {
+    background: #1e1e1e;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+.resource-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.resource-card a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.resource-card a:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Footer */
+.footer {
+    background-color: #181818;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+/* Gradient Background Matching style.css */
+body {
+    background: linear-gradient(to bottom right, #0f0f0f, #ec4899);
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

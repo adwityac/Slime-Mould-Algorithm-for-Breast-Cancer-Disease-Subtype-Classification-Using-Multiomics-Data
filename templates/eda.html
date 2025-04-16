@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDA - BCD Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/eda.css') }}">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" class="nav-logo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            <span>BCD Care</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('detection') }}">Detection</a>
+            <a href="{{ url_for('eda') }}" class="active">EDA</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+        </div>
+    </div>
+</nav>
+
+
+    <main class ="eda-page">
+        <section id="eda-section" class="eda-section">
+            <h2>Exploratory Data Analysis</h2>
+
+            <!-- Upload CSV -->
+            <div class="upload-section" style="margin-bottom: 20px;">
+                <h3>Upload CSV File for EDA</h3>
+                <input type="file" id="edaUpload" accept=".csv">
+                <button id="analyzeEDA">Analyze</button>
+            </div>
+
+            <!-- EDA Results (initially hidden) -->
+            <div id="eda-content" style="display: none;">
+                <!-- Static Dataset Overview -->
+                <div id="eda-results">
+                    <h3>BRCA DATASET:</h3>
+                    <p><strong>Basic Dataset Overview:</strong> This dataset contains multi-omics data from 705 breast cancer patients. It includes both molecular profiles and clinical annotations such as survival outcomes. The primary aim is to enable predictive modeling for breast cancer prognosis and subtype classification.</p>
+                    <p><strong>Domain:</strong> Breast Cancer (BRCA) — multi-omics data</p>
+                    <p><strong>Shape:</strong> 705 samples (rows) - breast cancer samples × 1,936 features (columns) - omics data types</p>
+
+                    <h4>Primary Focus:</h4>
+                    <table border="1">
+                        <tr>
+                            <th>Prefix</th>
+                            <th>Meaning</th>
+                            <th>Count (n=)</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>cn_</td>
+                            <td>Copy Number Variation</td>
+                            <td>860</td>
+                            <td>Measures how many copies of a gene are present.</td>
+                        </tr>
+                        <tr>
+                            <td>mn_</td>
+                            <td>Mutations</td>
+                            <td>249</td>
+                            <td>Represents gene mutation status.</td>
+                        </tr>
+                        <tr>
+                            <td>rs_</td>
+                            <td>Gene Expression</td>
+                            <td>604</td>
+                            <td>Normalized RNA expression levels.</td>
+                        </tr>
+                        <tr>
+                            <td>pp_</td>
+                            <td>Protein Profile</td>
+                            <td>223</td>
+                            <td>Quantified protein abundances from proteomic data.</td>
+                        </tr>
+                    </table>
+
+                    <p><strong>Dataset Source:</strong> <a href="https://portal.gdc.cancer.gov/projects/TCGA-BRCA" target="_blank">TCGA-BRCA</a></p>
+
+                    <h4>Target / Classes Used:</h4>
+                    <p><strong>Vital.status</strong> is the target variable. It has 2 classes:</p>
+                    <ul>
+                        <li><strong>0 (Alive):</strong> 611 patients</li>
+                        <li><strong>1 (Deceased):</strong> 94 patients</li>
+                    </ul>
+
+                    <h4>Application:</h4>
+                    <p>Can be used to train predictive models for:</p>
+                    <ul>
+                        <li>Patient prognosis</li>
+                        <li>Personalized treatment planning</li>
+                        <li>Subtype-specific therapy</li>
+                    </ul>
+                </div>
+
+                <!-- Dynamic Visualizations -->
+                <div class="eda-visualizations">
+                    <h3>Feature Correlation Heatmap</h3>
+                    <div class="heatmap-container">
+                        <!-- Heatmap will be dynamically inserted here -->
+                    </div>
+
+                    <div class="output-image">
+                        <h3>Analysis Results</h3>
+                        <div id="datasetInfo">
+                            <!-- Dataset stats will appear here -->
+                        </div>
+
+                        <!-- Always show output.png after upload -->
+                        <img src="/static/output.png" alt="Output Analysis Results" style="margin-top: 20px; width: 100%; max-width: 700px; border: 1px solid #ccc;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BCD Care | All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/eda.js"></script>
+</body>
+</html>

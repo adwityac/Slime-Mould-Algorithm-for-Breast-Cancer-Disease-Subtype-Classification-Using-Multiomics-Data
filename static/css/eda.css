@@ -1,0 +1,122 @@
+/* Page Background & Font */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to bottom right, #0f0f0f, #ec4899);
+    color: #e5e7eb;
+    margin: 0;
+    padding: 0;
+}
+
+/* EDA Section Styling */
+.eda-section {
+    padding: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem auto;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.eda-section h2 {
+    font-size: 2.2rem;
+    color: #ec4899;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Upload Section */
+.upload-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+#edaUpload {
+    padding: 12px;
+    font-size: 1rem;
+    margin-right: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+#analyzeEDA {
+    background-color: #ec4899;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#analyzeEDA:hover {
+    background-color: #be185d;
+}
+
+/* Dataset Table */
+#eda-results {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+#eda-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#eda-results th, #eda-results td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #e5e7eb;
+}
+
+#eda-results th {
+    background-color: #444;
+    color: #ec4899;
+}
+
+/* Visualization Styling */
+.eda-visualizations {
+    margin-top: 2rem;
+}
+
+.heatmap-container,
+.output-image {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.eda-visualizations img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Match detection-page layout */
+.eda-page {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #0f0f0f, #ec4899);
+    min-height: 100vh;
+}
+
+/* Optional - make footer consistent */
+footer {
+    background-color: #181818;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}

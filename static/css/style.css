@@ -1,0 +1,304 @@
+/* Root Variables */
+:root {
+    --primary-color: #ec4899;
+    --primary-hover: #be185d;
+    --bg-color: #121212; /* Changed to a dark background */
+    --text-color: #e5e7eb; /* Light text for contrast */
+    --text-light: #9ca3af;
+    --white: #ffffff;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+/* College Header */
+.college-header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spaces logos left & right */
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.college-header .logo {
+    width: 130px; /* Same size for both logos */
+    height: auto;
+}
+
+
+
+.title-container {
+    text-align: center;
+    flex-grow: 1; /* Keeps text centered */
+}
+
+.department {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 0.3rem;
+}
+
+.project-title {
+   
+    color: black; 
+}
+
+
+
+
+/* Container */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Hero Content (Centered Text) */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures images are on extreme left & right */
+    gap: 20px; /* Adjust this to control spacing */
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px; /* Adjust size as needed */
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.hero-content {
+    flex: 2;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 20px; /* Adds spacing between text & images */
+}
+
+
+
+
+
+
+
+/* Responsive Fix */
+@media (min-width: 992px) {
+    .hero-wrapper {
+        max-width: 1400px;
+    }
+
+    .hero-image {
+        max-width: 600px; /* Ensure proper scaling */
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+/* Features Section */
+.features {
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    background: #1e1e1e; /* Dark background for consistency */
+    border-radius: 10px;
+}
+
+.feature-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+/* Footer */
+.footer {
+    background-color: #181818;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gradient Background */
+body {
+    background: linear-gradient(to bottom right, #0f0f0f, #ec4899);
+}
+
+/* Welcome Animation */
+.welcome-banner {
+    font-size: 4rem;
+    color: #ec4899;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
+    text-shadow: 2px 2px 4px #000;
+    margin-top: 3rem;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Hero Image Animation (Left and Right) */
+.hero-image-container.left {
+    animation: moveFromLeft 1s ease-out forwards;
+}
+
+.hero-image-container.right {
+    animation: moveFromRight 1s ease-out forwards;
+}
+
+/* Image animation from left */
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Image animation from right */
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1.2rem 0; /* Increase padding for a bigger navbar */
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 2rem; /* Make 'BCD Care' bigger */
+    font-weight: bold;
+    color: var(--white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Increase space between links */
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.8rem; /* Increase font size of the links */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--text-light);
+}
+
+
+
